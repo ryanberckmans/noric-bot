@@ -1,6 +1,12 @@
 import scala.annotation.tailrec
 import scala.util.Random
 
+// This file contains MUD-specific command definitions for NoricMud. NoricMud
+// is the name of the closed-source MUD engine being developed in my spare
+// time. It's been in development since 2016. NoricMud is written in Scala 2.13.
+// It will someday be used to develop an indie MMORPG. Prior incarnations of
+// NoricMud were written in Java, Python, C++, and ruby, going back to 2008.
+
 type NoricMud
 object NoricMud {
   private val rareCmds = Set(
@@ -10,6 +16,7 @@ object NoricMud {
     "respawn 0",
   )
 
+  // TODO allow new cmds to be added from env variable so we don't have to recompile to test something new
   private val cmds: Array[String] = Array(
     "sneak",
     "af 1", // admin affect cmd
@@ -81,11 +88,11 @@ object NoricMud {
     //"tw" // toggle room is wilderness
   )
 
-  // TODO env var SAVE_BOTS, if set will send "levelup to save bots"
+  //  TODO env var SAVE_BOTS, if set will send "levelup to save bots"
   given as LoginCmds[NoricMud] = (name) => Seq(
     name + "\n",
     "yes-bot-secret-password-12893%$nlPeoxljKLJE\n", // send bot secret password if char is new so that bots will be spawned with realistic number of items/affects/etc.
-    // "levelup\n", // levelup so bot is saved
+    "levelup\n", // levelup so bot is saved
   )
 
   given as NextCmds[NoricMud] = (rand) => Seq(randomCmd(rand) + "\n")

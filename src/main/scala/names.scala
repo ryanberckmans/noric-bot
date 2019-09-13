@@ -1,4 +1,7 @@
 
+// List of uncommon baby names for bots to use to login.
+// Trivia: omission of `[String]` results in a compiler
+// bug https://github.com/lampepfl/dotty/issues/7034
 val names = Vector[String](
   "Aaliyah",
   "Aaron",

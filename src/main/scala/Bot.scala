@@ -40,6 +40,7 @@ object Bot {
     }
   }
 
+  // TODO runParallel should be tailrecurisve @tailrec via a private helper function
   def runParallel[T: LoginCmds: NextCmds](
     config: Config,
     nextName: => String,

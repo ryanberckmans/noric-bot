@@ -39,7 +39,7 @@ class ClientSocket(config: Config) {
         Try(br.read(arr, 0, arr.length)).toOption match {
           case Some(charCountRead) =>
             if (charCountRead < 0) {
-              disconnect() // end of file if read() returns < 0 chars raed
+              disconnect() // end of file if read() returns < 0 chars read
               Disconnected
             } else if (charCountRead > 0) {
               MsgFromServer(arr.take(charCountRead).mkString)
@@ -58,7 +58,6 @@ object ClientSocket {
   enum ReceiveResult {
     case Disconnected
     case MsgFromServer(msg: String)
-
   }
   export ReceiveResult._
 }
