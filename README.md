@@ -18,13 +18,13 @@ A bot to stress test [text-based MMORPGs](https://en.wikipedia.org/wiki/MUD) wri
 
 ### Technology
 
-noric-bot is written in [Scala 3](https://dotty.epfl.ch) and compiled to native using graalvm. noric-bot doesn't yet use many of the new features in Scala 3.
+noric-bot is written in [Scala 3](https://dotty.epfl.ch) and compiled to native using [graalvm](https://www.graalvm.org). Scala 3 has lots of new features and most aren't yet used in noric-bot.
 
 (noric-bot uses some Java APIs in lieu of Scala libraries because the latter aren't yet available for Scala 3. I think it's possible to use libraries compiled with Scala 2 within a Scala 3 codebase and would be interested to learn how.)
 
-Are you a Scala expert? I'd greatly appreciate PRs that improve the "Scala-ness" of this project.
+Are you a Scala expert? I'd greatly appreciate PRs that improve the "Scala-ness" of this project :-)
 
-Excellent IDE support for this toolchain is provided by [atom-ide-scala](https://github.com/laughedelic/atom-ide-scala).
+IDE support for this toolchain is provided by [atom-ide-scala](https://github.com/laughedelic/atom-ide-scala) and Dotty's implementation of the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/).
 
 Scala is my favorite language and I'm excited for Scala 3. I think Scala is the best mainstream language with a sophisticated type system. Sophisticated type systems are money in the bank. Going from TypeScript to Scala is like going from JavaScript to TypeScript.
 
@@ -42,7 +42,7 @@ Native compilation is cool. The binary starts up instantly, unlike the jvm. The 
 
 * install Scala `brew install scala sbt lampepfl/brew/dotty`
 * install [graalvm](https://www.graalvm.org) and ensure `native-image` is on your `PATH`
-  * 👉you can skip this step and run non-natively with `sbt run`
+  * 👉 you can skip this step and run non-natively with `sbt run`
 * compile `sbt compile`
 * compile to native `sbt show graalvm-native-image:packageBin` or the alias `sbt b`
 * run with `bin/noric-bot` which is a symlink to the binary produced by the build
