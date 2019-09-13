@@ -28,7 +28,7 @@ Are you a Scala expert? I'd greatly appreciate PRs that improve the "Scala-ness"
 
 IDE support for this toolchain is provided by [atom-ide-scala](https://github.com/laughedelic/atom-ide-scala) and Dotty's implementation of the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/).
 
-Scala is my favorite language and I'm excited for Scala 3. I think Scala is the best mainstream language with a sophisticated type system. Sophisticated type systems are money in the bank. Going from TypeScript to Scala is like going from JavaScript to TypeScript.
+Scala is my favorite language and I'm excited for Scala 3. I think Scala is the best mainstream language with a sophisticated type system. Sophisticated type systems are money in the bank. For me, from a type system perspective, going from TypeScript to Scala is like going from JavaScript to TypeScript. (I love TypeScript and write a lot of it!)
 
 Scala 3 launches in 2020 after a new compiler was written over a five year period. The new compiler is named "Dotty".
 
