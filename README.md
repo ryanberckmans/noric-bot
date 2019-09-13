@@ -1,6 +1,6 @@
 ## noric-bot
 
-A bot to stress test [text-based MMORPGs](https://en.wikipedia.org/wiki/MUD) written in [Scala 3](https://dotty.epfl.ch).
+A bot written in [Scala 3](https://dotty.epfl.ch) to stress test [text-based MMORPGs](https://en.wikipedia.org/wiki/MUD).
 
 Join us on the [MUD discord](https://discord.gg/HpvrhdQ)!
 
