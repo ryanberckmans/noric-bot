@@ -22,7 +22,7 @@ Join us on the [MUD discord](https://discord.gg/HpvrhdQ)!
 
 noric-bot is written in [Scala 3](https://dotty.epfl.ch) and compiled to native using [graalvm](https://www.graalvm.org). Scala 3 has lots of new features and most aren't yet used in noric-bot.
 
-(noric-bot uses some Java APIs in lieu of Scala libraries because the latter aren't yet available for Scala 3. I think it's possible to use libraries compiled with Scala 2 within a Scala 3 codebase and would be interested to learn how.)
+(noric-bot uses some Java APIs in lieu of Scala libraries because the latter aren't yet available for Scala 3. It may be possible to use libraries compiled with Scala 2 within a Scala 3 codebase using `libraryDependencies += ("a" %% "b" % "c").withDottyCompat(scalaVersion.value)`, see [here](https://github.com/lampepfl/dotty-example-project#getting-your-project-to-compile-with-dotty).)
 
 Are you a Scala expert? I'd greatly appreciate PRs that improve the "Scala-ness" of this project :-)
 
