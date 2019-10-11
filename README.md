@@ -84,4 +84,6 @@ parallel: Warning: raising 'ulimit -n' or 'nofile' in /etc/security/limits.conf
 parallel: Warning: or /proc/sys/fs/file-max may help.
 ```
 
-solution: https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c
+solutions:
+* https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c
+* https://blog.jayway.com/2015/04/13/600k-concurrent-websocket-connections-on-aws-using-node-js/
